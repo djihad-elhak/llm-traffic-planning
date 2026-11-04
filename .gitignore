@@ -14,3 +14,8 @@ paper/*.out
 paper/*.toc
 paper/*.bbl
 paper/*.blg
+experiments/*_mock*
+experiments/run_metadata_*.json
+experiments/figures_*.png
+experiments/error_taxonomy_*.csv
+experiments/summary_*.csv
