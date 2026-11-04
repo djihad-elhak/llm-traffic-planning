@@ -72,4 +72,4 @@ if SCENARIOS.exists():
         {"id": r["sid"], "request": r["text"], "TSTT change (%)": round(r["reference"]["tstt_change_pct"], 2)}
         for r in rows
     ])
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.dataframe(df, width="stretch", hide_index=True)
