@@ -6,3 +6,5 @@ mlruns/
 experiments/*.log
 .env
 experiments/scenario_cache/
+experiments/results_mock.jsonl
+experiments/summary_mock.csv

@@ -213,3 +213,27 @@ class HFClient:
                 pad_token_id=self._tok.eos_token_id,
             )
         return self._tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
+
+
+class MockClient:
+    """Deterministic stand-in for a model, used to test the pipeline without a GPU.
+
+    It answers condition B/C correctly on the first attempt for even-numbered scenarios
+    and with an invalid link on the first attempt for odd ones (to exercise the retry path).
+    Condition A returns a fixed number. This tests plumbing, not model quality.
+    """
+
+    def __init__(self, scenarios):
+        self.model = "mock"
+        self._by_text = {s.text: s for s in scenarios}
+
+    def complete(self, system: str, user: str, max_tokens: int = 300) -> str:
+        if not user.startswith("Request: "):
+            return "7500000"  # condition A
+        text = user[len("Request: "):].split("\nYour previous spec")[0]
+        sc = self._by_text[text]
+        first_attempt = "Your previous spec" not in user  # per trial, not shared across conditions
+        spec = {"op": sc.op, **sc.params}
+        if first_attempt and spec.get("init") is not None and int(sc.sid[1:]) % 2 == 1:
+            spec["term"] = 999  # invalid link on first attempt only
+        return json.dumps(spec)
