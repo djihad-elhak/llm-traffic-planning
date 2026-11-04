@@ -1,0 +1,8 @@
+numpy>=2.0
+scipy>=1.13
+anthropic>=0.40
+fastapi>=0.115
+uvicorn>=0.30
+pydantic>=2.8
+mlflow>=2.16
+pytest>=8.0
