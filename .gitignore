@@ -8,3 +8,9 @@ experiments/*.log
 experiments/scenario_cache/
 experiments/results_mock.jsonl
 experiments/summary_mock.csv
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
