@@ -1,0 +1,626 @@
+[
+  {
+    "sid": "S01",
+    "text": "Close the road segment from node 9 to node 10 for roadworks.",
+    "op": "close_link",
+    "params": {
+      "init": 9,
+      "term": 10
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 9966358.077516317,
+      "tstt_change_pct": 33.23726294169594,
+      "relative_gap": 2.3792807419587165e-05
+    }
+  },
+  {
+    "sid": "S02",
+    "text": "Widen the link from node 10 to node 11 so its capacity increases by a factor of 1.5.",
+    "op": "capacity",
+    "params": {
+      "init": 10,
+      "term": 11,
+      "factor": 1.5
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7335974.496307275,
+      "tstt_change_pct": -1.927549131201925,
+      "relative_gap": 2.8265901158600705e-05
+    }
+  },
+  {
+    "sid": "S03",
+    "text": "Introduce a toll of 10 on the link from node 10 to node 16.",
+    "op": "toll",
+    "params": {
+      "init": 10,
+      "term": 16,
+      "amount": 10.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7486504.612346321,
+      "tstt_change_pct": 0.08484300796718344,
+      "relative_gap": -0.00043181062247356735
+    }
+  },
+  {
+    "sid": "S04",
+    "text": "Widen the link from node 24 to node 13 so its capacity increases by a factor of 2.",
+    "op": "capacity",
+    "params": {
+      "init": 24,
+      "term": 13,
+      "factor": 2.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7243132.733697836,
+      "tstt_change_pct": -3.168722912090903,
+      "relative_gap": 2.8474815352072997e-05
+    }
+  },
+  {
+    "sid": "S05",
+    "text": "Introduce a toll of 5 on the link from node 16 to node 10.",
+    "op": "toll",
+    "params": {
+      "init": 16,
+      "term": 10,
+      "amount": 5.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7472127.248497941,
+      "tstt_change_pct": -0.10736367300654684,
+      "relative_gap": 5.887130203752601e-06
+    }
+  },
+  {
+    "sid": "S06",
+    "text": "Scale total travel demand across the whole network by 0.9.",
+    "op": "demand",
+    "params": {
+      "factor": 0.9
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 5572771.80964633,
+      "tstt_change_pct": -25.499278960188143,
+      "relative_gap": 1.6391019256265747e-05
+    }
+  },
+  {
+    "sid": "S07",
+    "text": "Close the road segment from node 22 to node 21 for roadworks.",
+    "op": "close_link",
+    "params": {
+      "init": 22,
+      "term": 21
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7856689.25720733,
+      "tstt_change_pct": 5.0337309046998735,
+      "relative_gap": 2.2538622860456815e-05
+    }
+  },
+  {
+    "sid": "S08",
+    "text": "Widen the link from node 7 to node 8 so its capacity increases by a factor of 2.",
+    "op": "capacity",
+    "params": {
+      "init": 7,
+      "term": 8,
+      "factor": 2.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7407027.509570224,
+      "tstt_change_pct": -0.977662629303876,
+      "relative_gap": 2.204195345275307e-05
+    }
+  },
+  {
+    "sid": "S09",
+    "text": "Introduce a toll of 10 on the link from node 15 to node 10.",
+    "op": "toll",
+    "params": {
+      "init": 15,
+      "term": 10,
+      "amount": 10.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7566981.996915039,
+      "tstt_change_pct": 1.1607211136146092,
+      "relative_gap": -0.0003432281698901706
+    }
+  },
+  {
+    "sid": "S10",
+    "text": "Widen the link from node 3 to node 1 so its capacity increases by a factor of 2.",
+    "op": "capacity",
+    "params": {
+      "init": 3,
+      "term": 1,
+      "factor": 2.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7479993.560867926,
+      "tstt_change_pct": -0.0022012935827418873,
+      "relative_gap": 2.571138142411299e-05
+    }
+  },
+  {
+    "sid": "S11",
+    "text": "Introduce a toll of 5 on the link from node 18 to node 7.",
+    "op": "toll",
+    "params": {
+      "init": 18,
+      "term": 7,
+      "amount": 5.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7511252.757678562,
+      "tstt_change_pct": 0.4156935675502042,
+      "relative_gap": 5.631037525167057e-06
+    }
+  },
+  {
+    "sid": "S12",
+    "text": "Scale total travel demand across the whole network by 0.9.",
+    "op": "demand",
+    "params": {
+      "factor": 0.9
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 5572771.80964633,
+      "tstt_change_pct": -25.499278960188143,
+      "relative_gap": 1.6391019256265747e-05
+    }
+  },
+  {
+    "sid": "S13",
+    "text": "Close the road segment from node 5 to node 4 for roadworks.",
+    "op": "close_link",
+    "params": {
+      "init": 5,
+      "term": 4
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 9102476.386855988,
+      "tstt_change_pct": 21.688286768675358,
+      "relative_gap": 1.6900782405694443e-05
+    }
+  },
+  {
+    "sid": "S14",
+    "text": "Widen the link from node 3 to node 12 so its capacity increases by a factor of 1.5.",
+    "op": "capacity",
+    "params": {
+      "init": 3,
+      "term": 12,
+      "factor": 1.5
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7479781.567894855,
+      "tstt_change_pct": -0.005035364290941979,
+      "relative_gap": 2.529836005261858e-05
+    }
+  },
+  {
+    "sid": "S15",
+    "text": "Introduce a toll of 10 on the link from node 18 to node 16.",
+    "op": "toll",
+    "params": {
+      "init": 18,
+      "term": 16,
+      "amount": 10.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7647201.4127193075,
+      "tstt_change_pct": 2.23315051193763,
+      "relative_gap": 5.58946522581014e-06
+    }
+  },
+  {
+    "sid": "S16",
+    "text": "Widen the link from node 9 to node 8 so its capacity increases by a factor of 2.",
+    "op": "capacity",
+    "params": {
+      "init": 9,
+      "term": 8,
+      "factor": 2.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7362197.4930444015,
+      "tstt_change_pct": -1.5769817239094084,
+      "relative_gap": 3.148534714931917e-05
+    }
+  },
+  {
+    "sid": "S17",
+    "text": "Introduce a toll of 10 on the link from node 18 to node 20.",
+    "op": "toll",
+    "params": {
+      "init": 18,
+      "term": 20,
+      "amount": 10.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7592674.299804652,
+      "tstt_change_pct": 1.5041938334442981,
+      "relative_gap": 1.2266067762704374e-16
+    }
+  },
+  {
+    "sid": "S18",
+    "text": "Scale total travel demand across the whole network by 1.1.",
+    "op": "demand",
+    "params": {
+      "factor": 1.1
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 9994390.730342176,
+      "tstt_change_pct": 33.6120231004683,
+      "relative_gap": 4.682399420425577e-05
+    }
+  },
+  {
+    "sid": "S19",
+    "text": "Close the road segment from node 11 to node 12 for roadworks.",
+    "op": "close_link",
+    "params": {
+      "init": 11,
+      "term": 12
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7721881.364322906,
+      "tstt_change_pct": 3.231524468692099,
+      "relative_gap": 3.456575695123226e-05
+    }
+  },
+  {
+    "sid": "S20",
+    "text": "Widen the link from node 22 to node 20 so its capacity increases by a factor of 2.",
+    "op": "capacity",
+    "params": {
+      "init": 22,
+      "term": 20,
+      "factor": 2.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7463520.564466737,
+      "tstt_change_pct": -0.22242385992763672,
+      "relative_gap": 2.623835837287757e-05
+    }
+  },
+  {
+    "sid": "S21",
+    "text": "Introduce a toll of 20 on the link from node 14 to node 15.",
+    "op": "toll",
+    "params": {
+      "init": 14,
+      "term": 15,
+      "amount": 20.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7689807.781215994,
+      "tstt_change_pct": 2.8027423205231843,
+      "relative_gap": 4.844451778836053e-16
+    }
+  },
+  {
+    "sid": "S22",
+    "text": "Widen the link from node 10 to node 17 so its capacity increases by a factor of 1.5.",
+    "op": "capacity",
+    "params": {
+      "init": 10,
+      "term": 17,
+      "factor": 1.5
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7414749.33700576,
+      "tstt_change_pct": -0.8744318257930291,
+      "relative_gap": 2.7776538727705054e-05
+    }
+  },
+  {
+    "sid": "S23",
+    "text": "Introduce a toll of 10 on the link from node 1 to node 2.",
+    "op": "toll",
+    "params": {
+      "init": 1,
+      "term": 2,
+      "amount": 10.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7528349.1142904805,
+      "tstt_change_pct": 0.6442496502767511,
+      "relative_gap": 2.2457649810668512e-05
+    }
+  },
+  {
+    "sid": "S24",
+    "text": "Scale total travel demand across the whole network by 1.1.",
+    "op": "demand",
+    "params": {
+      "factor": 1.1
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 9994390.730342176,
+      "tstt_change_pct": 33.6120231004683,
+      "relative_gap": 4.682399420425577e-05
+    }
+  },
+  {
+    "sid": "S25",
+    "text": "Close the road segment from node 20 to node 21 for roadworks.",
+    "op": "close_link",
+    "params": {
+      "init": 20,
+      "term": 21
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7807389.431996657,
+      "tstt_change_pct": 4.374656273476998,
+      "relative_gap": 2.5467442476442837e-05
+    }
+  },
+  {
+    "sid": "S26",
+    "text": "Widen the link from node 8 to node 9 so its capacity increases by a factor of 2.",
+    "op": "capacity",
+    "params": {
+      "init": 8,
+      "term": 9,
+      "factor": 2.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7360746.556316416,
+      "tstt_change_pct": -1.5963788634497305,
+      "relative_gap": 2.7105702805115793e-05
+    }
+  },
+  {
+    "sid": "S27",
+    "text": "Introduce a toll of 10 on the link from node 21 to node 20.",
+    "op": "toll",
+    "params": {
+      "init": 21,
+      "term": 20,
+      "amount": 10.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7550164.256726951,
+      "tstt_change_pct": 0.9358897706007195,
+      "relative_gap": -9.176539470854332e-05
+    }
+  },
+  {
+    "sid": "S28",
+    "text": "Widen the link from node 12 to node 13 so its capacity increases by a factor of 2.",
+    "op": "capacity",
+    "params": {
+      "init": 12,
+      "term": 13,
+      "factor": 2.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7479741.079853677,
+      "tstt_change_pct": -0.00557663681460498,
+      "relative_gap": 2.6768785471163492e-05
+    }
+  },
+  {
+    "sid": "S29",
+    "text": "Introduce a toll of 10 on the link from node 15 to node 22.",
+    "op": "toll",
+    "params": {
+      "init": 15,
+      "term": 22,
+      "amount": 10.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7515425.093495741,
+      "tstt_change_pct": 0.47147227829195515,
+      "relative_gap": -0.000341679472228054
+    }
+  },
+  {
+    "sid": "S30",
+    "text": "Close the road segment from node 20 to node 18 for roadworks.",
+    "op": "close_link",
+    "params": {
+      "init": 20,
+      "term": 18
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 10166865.493330603,
+      "tstt_change_pct": 35.9177866670953,
+      "relative_gap": 3.20936565491154e-05
+    }
+  },
+  {
+    "sid": "S31",
+    "text": "Widen the link from node 8 to node 7 so its capacity increases by a factor of 2.",
+    "op": "capacity",
+    "params": {
+      "init": 8,
+      "term": 7,
+      "factor": 2.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7408427.090374623,
+      "tstt_change_pct": -0.9589520517595501,
+      "relative_gap": 2.327024683822679e-05
+    }
+  },
+  {
+    "sid": "S32",
+    "text": "Introduce a toll of 5 on the link from node 15 to node 19.",
+    "op": "toll",
+    "params": {
+      "init": 15,
+      "term": 19,
+      "amount": 5.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7475582.607835729,
+      "tstt_change_pct": -0.061170006567296785,
+      "relative_gap": -2.4916387751217896e-16
+    }
+  },
+  {
+    "sid": "S33",
+    "text": "Widen the link from node 6 to node 5 so its capacity increases by a factor of 2.",
+    "op": "capacity",
+    "params": {
+      "init": 6,
+      "term": 5,
+      "factor": 2.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7430363.742570326,
+      "tstt_change_pct": -0.6656875037745658,
+      "relative_gap": 2.1605378285097322e-05
+    }
+  },
+  {
+    "sid": "S34",
+    "text": "Introduce a toll of 10 on the link from node 16 to node 18.",
+    "op": "toll",
+    "params": {
+      "init": 16,
+      "term": 18,
+      "amount": 10.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7643099.5154081965,
+      "tstt_change_pct": 2.1783134725347137,
+      "relative_gap": 2.667551123231228e-06
+    }
+  },
+  {
+    "sid": "S35",
+    "text": "Close the road segment from node 17 to node 10 for roadworks.",
+    "op": "close_link",
+    "params": {
+      "init": 17,
+      "term": 10
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 8174281.815866024,
+      "tstt_change_pct": 9.279530916822218,
+      "relative_gap": 3.287812762679069e-05
+    }
+  },
+  {
+    "sid": "S36",
+    "text": "Widen the link from node 23 to node 24 so its capacity increases by a factor of 1.5.",
+    "op": "capacity",
+    "params": {
+      "init": 23,
+      "term": 24,
+      "factor": 1.5
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7466923.234740653,
+      "tstt_change_pct": -0.1769345778384865,
+      "relative_gap": 2.7372273548254884e-05
+    }
+  },
+  {
+    "sid": "S37",
+    "text": "Introduce a toll of 5 on the link from node 24 to node 23.",
+    "op": "toll",
+    "params": {
+      "init": 24,
+      "term": 23,
+      "amount": 5.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7486560.006751528,
+      "tstt_change_pct": 0.08558355921716007,
+      "relative_gap": 9.62053703556055e-06
+    }
+  },
+  {
+    "sid": "S38",
+    "text": "Widen the link from node 21 to node 24 so its capacity increases by a factor of 1.5.",
+    "op": "capacity",
+    "params": {
+      "init": 21,
+      "term": 24,
+      "factor": 1.5
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7378671.261543727,
+      "tstt_change_pct": -1.3567488356152537,
+      "relative_gap": 2.1272193341533578e-05
+    }
+  },
+  {
+    "sid": "S39",
+    "text": "Introduce a toll of 20 on the link from node 10 to node 15.",
+    "op": "toll",
+    "params": {
+      "init": 10,
+      "term": 15,
+      "amount": 20.0
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 7886547.585274912,
+      "tstt_change_pct": 5.432897970221491,
+      "relative_gap": 1.1809002158997485e-16
+    }
+  },
+  {
+    "sid": "S40",
+    "text": "Close the road segment from node 17 to node 16 for roadworks.",
+    "op": "close_link",
+    "params": {
+      "init": 17,
+      "term": 16
+    },
+    "reference": {
+      "baseline_tstt": 7480158.221110826,
+      "scenario_tstt": 8279487.397134007,
+      "tstt_change_pct": 10.685992894739568,
+      "relative_gap": 2.3706865615777587e-05
+    }
+  }
+]

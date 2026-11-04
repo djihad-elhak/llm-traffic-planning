@@ -5,3 +5,4 @@ __pycache__/
 mlruns/
 experiments/*.log
 .env
+experiments/scenario_cache/

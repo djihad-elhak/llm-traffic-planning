@@ -67,7 +67,7 @@ def reference_metrics(base: Network, sc: Scenario, base_tstt: float) -> dict[str
     }
 
 
-def build_scenarios(base: Network, n: int = 40, seed: int = 7) -> list[Scenario]:
+def build_scenarios(base: Network, n: int = 40, seed: int = 7, compute_reference: bool = True) -> list[Scenario]:
     """Deterministic generation: pick links whose removal keeps the network connected."""
     rng = np.random.default_rng(seed)
     candidates: list[Scenario] = []
@@ -105,10 +105,12 @@ def build_scenarios(base: Network, n: int = 40, seed: int = 7) -> list[Scenario]
         if len(candidates) >= n:
             break
 
-    base_tstt = solve_user_equilibrium(base, max_iter=5000, tol=1e-5).tstt  # solved once
     for i, sc in enumerate(candidates, 1):
         sc.sid = f"S{i:02d}"
-        sc.reference = reference_metrics(base, sc, base_tstt)
+    if compute_reference:
+        base_tstt = solve_user_equilibrium(base, max_iter=5000, tol=1e-5).tstt
+        for sc in candidates:
+            sc.reference = reference_metrics(base, sc, base_tstt)
     return candidates
 
 

@@ -176,3 +176,40 @@ def run_trial(net: Network, sc: Scenario, condition: str, client: LLMClient) -> 
     except Exception as exc:  # solver or spec errors are data, not crashes
         trial.errors.append(f"solver error: {exc}")
     return trial
+
+
+class HFClient:
+    """Open-weight instruct model on a local GPU (e.g. Kaggle T4), 4-bit quantized.
+
+    Requires: transformers, accelerate, bitsandbytes. Free on Kaggle's T4 GPUs.
+    """
+
+    def __init__(self, model: str, max_new_tokens: int = 300):
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+
+        self.model = model
+        self.max_new_tokens = max_new_tokens
+        self._tok = AutoTokenizer.from_pretrained(model)
+        quant = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_compute_dtype=torch.float16,
+            bnb_4bit_quant_type="nf4",
+        )
+        self._model = AutoModelForCausalLM.from_pretrained(
+            model, quantization_config=quant, device_map="auto"
+        )
+        self._torch = torch
+
+    def complete(self, system: str, user: str, max_tokens: int = 300) -> str:
+        messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
+        text = self._tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        inputs = self._tok(text, return_tensors="pt").to(self._model.device)
+        with self._torch.no_grad():
+            out = self._model.generate(
+                **inputs,
+                max_new_tokens=min(max_tokens, self.max_new_tokens),
+                do_sample=False,
+                pad_token_id=self._tok.eos_token_id,
+            )
+        return self._tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
